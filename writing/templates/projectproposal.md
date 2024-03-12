@@ -10,7 +10,8 @@
 # 3. FAQ:
 [Write down all the primary concerns that the customers of this product might have in a question answer format.]
 
-> [ADD MORE QUESTIONS to clarify the project as much as possible. It should have minimum of 20 questions and maximum of 100 questions. The more questions you ask, the better chances of clearing your own doubts/worries while providing the clarity, future scope and need to the leadership.]
+> [ADD MORE QUESTIONS to clarify the project as much as possible. It should have minimum of 30 questions and maximum of 100 questions. The more questions you ask, the better chances of clearing your own doubts/worries while providing the clarity, future scope and need to the leadership.]
+> Do a search for 5 Why's. 
 
 
 # 4. Opportunities:
