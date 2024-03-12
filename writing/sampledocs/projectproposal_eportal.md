@@ -27,7 +27,7 @@ Editors will be required to review equivalent number of articles to post an arti
 #### 6. How do we plan to maintain quality for review and approval process?
 We will be working on a tool that rates the article internally. If we find a poorly written article getting approved by someone, we will flag the individual and appropriate next steps will be taken.
 
-> [ADD MORE QUESTIONS to clarify the tool as much as possible]
+> [ADD MORE QUESTIONS to clarify the tool as much as possible. It should have minimum of 20 questions and maximum of 100 questions. The more questions you ask, the better chances of clearing your own doubts/worries while providing the clarity, future scope and need to the leadership.]
 
 
 # 4. Opportunities:
