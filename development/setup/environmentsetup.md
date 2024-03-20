@@ -1,4 +1,5 @@
 # Environment Setup Wiki
+> Note, it was made using https://github.com/nbnw-org/docs/blob/main/writing/developmentdocs/generic_template.md
 
 We noticed that there were problems in properly running amplify cli commands due to different dependencies. Due to this reason, we are maintaining this doc.
 
