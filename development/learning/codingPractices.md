@@ -1,4 +1,6 @@
 # Coding Standards at NBNW
+Live CR Session 1 - https://youtu.be/fLotOp2v8r8
+
 ## 1. Purpose
 This document outlines the coding practices that every developer, be it MLE, SDE, Data Analytics Engineer, etc has to follow. Any Role that ends with Engineer at NBNW will have to read this document and adhere to the standards.
 
