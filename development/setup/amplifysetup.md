@@ -27,6 +27,11 @@ After this step, the terminal will exit. Run the following command to continue:
 
 amplify pull
 
+#### Note:
+1. After executing the amplify pull command if you face error saying "Failed to pull the backend" that means either you have entered the wrong access_ID or secretAccessKey or there is any extra space present while copying the accesskey or secretkey. Kindly remove it and try again one more time
+2. If this is not the case then open the amplify cli access key csv file using notepad or VSCode (avoid using excel), correctly copy the accesskey and secrect_access_key. Then re-run the command of amplify configure, excute all steps successfully and then re-run amplify pull.
+It will then successfully pull the backend services and the further steps are same as mentioned in [Onboarding](https://github.com/nbnw-org/docs/blob/main/onboarding/nbnwdeveloper.md) 
+
 # Setting Up a New Project:
 ## To initialize a new project with Amplify, follow these steps:
 
