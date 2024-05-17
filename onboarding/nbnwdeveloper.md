@@ -61,6 +61,8 @@ For React JS refresher, use the following - [React Course - Youtube](https://www
 
 [Notification Service Demo](https://youtu.be/bX5_F75SkYM)
 
+[End to End flow - onboarding to development](https://youtu.be/gOVUywvEDNc)
+
 ## Readouts
 
 ### Must Read
