@@ -1,4 +1,36 @@
+# Migrating categories and sub categories in a dynamodb table
+
+This document aims to map the categories and subcategories of articles present in dynamodb table with new categories and sub categories (whenever necessary) .
+
+## 0. Prerequisite knowledge/work done
+
+1. Each table stores what kind of data and what interface is used to store the article .
+2. Knowledge about how to create APIs using NodeJs and how do they work .
+
+## 1. Prior Understanding
+
+Some important points :
+
+1. when to use different dynamodb commands like getcommand,scancommand,putcommand .what is event object and how to use it .
+2. how to write parameters object to pass in these different commands.
+3. how to use get,put,get,post command from aws-amplify/api library and how to pass query parameters.
+
+## API permissions
+
+currently the APi nbnwreactfrontend does not have permission to update articles in NBNWNewsTable so use the nbnweditorfinal api to update the items of this particular table.
+
 **Functions used in backend**
+<br />
+Steps involved
+<br />
+1 Use these functions defined here in your api change the tablename,filterexpression,expressionattributevalues depending on table attributes.
+<br />
+2 Run this command to update backend in cloud
+
+```
+amplify push
+
+```
 
 <br />
 
@@ -73,14 +105,16 @@ return data.Items;
 This was the function used in backend to update category of each article and replace it with new category. replace the tablename with the appropriate table name in your case.
 
 **Functions used in Frontend**
+Steps involved
+<br />
+Use these functions defined here in your frontend.
+<br />
 
 ```
 
 export async function retrieveApprovedNews(): Promise<
 
 PostFrontend[] | unknown
-
-
 {
 
 const category = 'Business';
