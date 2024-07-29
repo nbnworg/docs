@@ -60,9 +60,10 @@ Use the AWSCodeArtifactAdminAccess AWS managed policy. The following snippet sho
 
 1. Sign in to the AWS Management Console and open the AWS CodeArtifact console at https://console.aws.amazon.com/codesuite/codeartifact/start. For more information, see Setting up with AWS CodeArtifact.
 
-2. Choose Create repository.
+2. Go to domains->nbnw-domain
+3. Choose Create repository.
 
-3. In Repository name, enter repo-name
+4. In Repository name, enter repo-name
 
 (Optional) In Repository Description, enter an optional description for your repository.
 
@@ -74,7 +75,7 @@ Use the AWSCodeArtifactAdminAccess AWS managed policy. The following snippet sho
 
 7. In AWS account, choose This AWS account.
 
-8. In Domain name, enter my-domain.
+8.
 
 9. Expand Additional configuration.
 
@@ -94,8 +95,6 @@ Package flow shows how my-domain, my-repo, and npm-store are related.
 <br />
 Step 1: Create repository shows details about my-repo and npm-store.
 <br />
-Step 2: Select domain shows details about my-domain.
-<br />
 When you're ready, choose Create repository.
 <br />
 On the my-repo page, choose View connection instructions, and then choose npm.
@@ -103,7 +102,12 @@ On the my-repo page, choose View connection instructions, and then choose npm.
 Use the AWS CLI to run the login command shown under Configure your npm client using this AWS CLI CodeArtifact command.
 <br />
 
-aws codeartifact login --tool npm --repository my-repo --domain my-domain --domain-owner 111122223333
+```
+aws codeartifact login --tool npm --repository nbnw-repo --domain nbnw-domain --domain-owner 215750026173 --region us-east-1
+```
+
+replace nbnw-repo with the name of your repo and replace 215750026173 with your 12 digit id
+
 You should receive output confirming your login succeeded.
 
 <br />
@@ -114,8 +118,16 @@ Login expires in 12 hours at 2020-10-08 02:45:33-04:00
 
 # Automate publishing of package to repo
 
-1. Go to github settings->secrets and variables->actions and set the variables like AWS_ACCESS_KEY_ID,AWS_REGION,AWS_SECRET_ACCESS_KEY ,CODEARTIFACT_DOMAIN, CODEARTIFACT_DOMAIN_OWNER , CODEARTIFACT_REPOSITORY .
-   Using publish.yml file for publishing of package
+1. Go to nbnworg and a create new repository their.
+1. Go to github settings->secrets and variables->actions.
+1. Set the variables like <br />
+   AWS_REGION:us-east-1 <br />
+   CODEARTIFACT_REPOSITORY:the name of your repo in codeartifact .<br />
+   CODEARTIFACT_DOMAIN_OWNER :your 12-digit-id through which you log in to the console.<br />
+   CODEARTIFACT_DOMAIN :the domain name .<br />
+   AWS_ACCESS_KEY_ID : as provided to you .<br />
+   AWS_SECRET_ACCESS_KEY : as provided to you .<br />
+   Now create a folder **.github** in your project directory .inside it create a folder called **workflows** and inside create a file called publish.yml and copy paste the code provided below
 
 ```
 
@@ -169,3 +181,27 @@ Logs in to AWS CodeArtifact.<br />
 Installs npm dependencies.<br />
 Builds the npm package.<br />
 Publishes the package to AWS CodeArtifact.<br />
+
+Now create a package.json file <br />
+Use the sample provided below :<br />
+
+```
+{
+  "name": "nbnw-ui-constants",
+  "version": "1.0.6",
+  "main": "main.js",
+  "types": "typeDeclaration.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "NBNW",
+  "license": "MIT"
+}
+
+```
+
+change the name of package to whatever name you like . Change the version to 1.0.0 and whenever you push changes to code update the version to 1.0.1 and on each subsequent update the version number should be changed to 1.0.2,1.0.3 and so on .The types field is used to specify the typedeclarations of functions ,objects,enums and interfaces if not provided error is thrown by typescript compiler .
+Now create a main.js file beacuse it is the entry point for the package .<br />
+The final export of code will be done from main.js file .Kindly check nbnw-ui-constants and nbnw-ui-components repo in nbnw org for better clarity.

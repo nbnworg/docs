@@ -76,7 +76,7 @@ Change the scan parameters and environment variables in the function according t
 
 **Steps Involved**
 
-1. Copy this function and paste it in "amplify/backend/function/src/path/{RESOURCE_NAME}/get.js" this directory and then export this function using module.exports={listTechArticlesWithoutSubcategory}
+1. Copy this function and paste it in " amplify/backend/function/path/news/get.js" this directory and then export this function using module.exports={listTechArticlesWithoutSubcategory}
    <br />
 
 2. in the file where you need this function import it using import {listTechArticlesWithoutSubcategory}=require("file_path") .
@@ -140,7 +140,7 @@ Change the scan parameters and environment variables in the function according t
 
 **Steps Involved**
 
-1. Copy this function and paste it in "amplify/backend/function/src/path/{RESOURCE_NAME}/put.js" this directory and then export this function using module.exports={updateCategory}
+1. Copy this function and paste it in "amplify/backend/function/src/path/news/put.js" this directory and then export this function using module.exports={updateCategory}
    <br />
 
 2. in the file where you need this function import it using import {updateCategory}=require("file_path") .
@@ -155,6 +155,8 @@ amplify push
 
 **Functions used in Frontend**
 
+<br />
+Copy and paste both of these functions in src/data/news.tsx <br />
 **Explanation of the Function**
 The retrieveApprovedNews function is an asynchronous function designed to fetch approved news articles from an API. It returns a promise that resolves to an array of PostFrontend objects or an unknown type in case of an error.
 
@@ -307,3 +309,5 @@ throw error;
 }
 
 ```
+
+Use the retireveApprovedNews() function to get all articles of a partiular category and then using a for loop iterate over the articles array run the ChangeCategory() function for each of the article .
