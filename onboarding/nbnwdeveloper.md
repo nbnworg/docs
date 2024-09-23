@@ -73,14 +73,14 @@ Note - for below, you will have to request for Access Key to your manager.
 
 
 ## NBNW Website
-Currently, NBNW website is using React.js framework for frontend, AWS Lambda as backend and Dynamodb + S3 as storage.
+Currently, NBNW website is using Next.js framework for frontend, AWS Lambda as backend and Dynamodb + S3 as storage.
 
 To get started, please install github cli. Once done, follow the below steps to get started!
 
 1. Clone the repository and cd into the directory
 
 ```
-gh repo clone nbnw-org/nbnw-react-frontend && cd nbnw-react-frontend
+gh repo clone nbnworg/nbnw-nextjs-frontend && cd nbnw-nextjs-frontend
 ```
 
 2. Install node packages
