@@ -205,3 +205,9 @@ Use the sample provided below :<br />
 change the name of package to whatever name you like . Change the version to 1.0.0 and whenever you push changes to code update the version to 1.0.1 and on each subsequent update the version number should be changed to 1.0.2,1.0.3 and so on .The types field is used to specify the typedeclarations of functions ,objects,enums and interfaces if not provided error is thrown by typescript compiler .
 Now create a main.js file beacuse it is the entry point for the package .<br />
 The final export of code will be done from main.js file .Kindly check nbnw-ui-constants and nbnw-ui-components repo in nbnw org for better clarity.
+
+# Updating the package
+When you want to update your package i.e nbnw-ui-constant or nbnw-ui-components then you just need to make the changes that you required it can be change in categories, change in subcategories or some constants value and many more.
+After this you will update the version of the current package in package.json
+For Example:- If the current version of package is 1.0.6 and after you make changes it should become 1.0.7
+After doing this you just need to create the PR. Once this PR is reviewed and merge into the main then github workflow have publish.yml file this is basically a scripting file which is responsible to compile, build and publish the updated package with the new version then you simply need to update your package whereever you are using it and you will be able to see the changes.
