@@ -98,7 +98,7 @@ amplify pull
 
 ```
 1. Select the authentication method you want to use: AWS profile
-2. Please choose the profile you want to use: default
+2. Please choose the profile you want to use: NBNW_Old_permissions-747136956388
 3. Which app are you working on? nbnwreactfrontend (NOTE the name of the app here)
 4. Pick a backend environment: dev (NOTE That you have to select dev)
 5. Choose your default editor: Visual Studio Code
