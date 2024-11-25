@@ -7,30 +7,56 @@ Open a terminal window and run the following command:
 npm install -g @aws-amplify/cli
 
 ### 2.Configure Amplify:
-After installation, configure the Amplify CLI by running:
 
-amplify configure
+For the configuration of the amplify you need to first accept the invitation that you will recevied onto your mail from the administrator. You need to have an authenticator pre installed into your mobile as it will be required once once.
 
-Press ENTER twice.
-Enter the access key of the newly created user when prompted. These details will be provided by your admin.
+After accepting the invitation you will be redirected to your AWS access portal in case if you don't then you can also open that from the Access Portal URL that will be present in your mail recevied.
 
-Enter the access key of the newly created user: 
-accessKeyId: (put_your_access_ID)
-secretAccessKey: (put_your_access_KEY)
+Once you open the portal you can see aws account assigned to you mostly it will be (sarvesh-bhatnagar) or (NBNW_Old_Permissions). You need to click on the access keys then choose your operating system and follow the steps mentioned
 
-### 3.Set Profile Name:
-When prompted for the profile name, enter:
+  
 
-Profile Name: default
+As a first step you need to configure AWS CLI by setting up the AWS IAM Identity Center Credentials and for that there is command mentiond `aws configure sso` Once you excute this command on terminal it will ask for following things:-
 
-After this step, the terminal will exit. Run the following command to continue:
+- SSO session name (Recommended): NBNW
+- SSO start URL [None]: https://d-9067f4a8a8.awsapps.com/start/#
+- SSO region [None]: us-east-1
+- SSO registration scopes [sso:account:access]: (Enter)
 
-amplify pull
+After this SSO Authorization page will open in your default browser you just need to accept that after that move back to terminal and continue the process:
 
-#### Note:
-1. After executing the amplify pull command if you face error saying "Failed to pull the backend" that means either you have entered the wrong access_ID or secretAccessKey or there is any extra space present while copying the accesskey or secretkey. Kindly remove it and try again one more time
-2. If this is not the case then open the amplify cli access key csv file using notepad or VSCode (avoid using excel), correctly copy the accesskey and secrect_access_key. Then re-run the command of amplify configure, excute all steps successfully and then re-run amplify pull.
-It will then successfully pull the backend services and the further steps are same as mentioned in [Onboarding](https://github.com/nbnw-org/docs/blob/main/onboarding/nbnwdeveloper.md) 
+- There are 2 AWS accounts available to you. Choose the accound of Sarvesh Bhatnagar
+- Using the account ID 747136956388
+- The only role available to you is: NBNW_Old_permissions (Enter)
+- Using the role name "NBNW_Old_permissions"
+- CLI default client Region [us-east-1]: (Enter)
+- CLI default output format [None]: json
+- CLI profile name [NBNW_Old_permissions-747136956388]: (Enter)
+
+After completing the above steps run the command `aws configure list-profiles` to see your recent profile created. If you can see NBNW_Old_permissions-747136956388 then you have successfully created the profile for further use.
+
+Now you need to open the .aws folder into your VSCode or any editor you are using and in that file you need to modify the config file. You need to paste `credential_process = aws configure export-credentials --profile NBNW_Old_permissions-747136956388` just after the output = json line. Following is just an example how your config file will look like
+
+    [default]
+	region=us-east-1
+	
+	[profile NBNW_Old_permissions-747136956388]
+	sso_session = test
+	sso_account_id = 747136956388
+	sso_role_name = NBNW_Old_permissions
+	region = us-east-1
+	output = json
+	credential_process = aws configure export-credentials --profile NBNW_Old_permissions-747136956388
+	
+	[sso-session NBNWOld]
+	sso_start_url = https://d-9067f4a8a8.awsapps.com/start/#
+	sso_region = us-east-1
+	sso_registration_scopes = sso:account:access
+
+This is all you need to setup Amplify CLI for further use now you can follow the steps how to pull the amplify changes into your repo from the onboarding documentation
+
+An important point to note here is that you always need to login amplify whenever your are pulling changes from amplify or pushing changes from amplify and for that you need to execute the command  `aws sso login --profile NBNW_Old_permissions-747136956388` after this only you can work with the amplify and it get auto expired after 12 hours
+
 
 # Setting Up a New Project:
 ## To initialize a new project with Amplify, follow these steps:
