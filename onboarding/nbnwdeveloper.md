@@ -88,7 +88,7 @@ gh repo clone nbnworg/nbnw-nextjs-frontend && cd nbnw-nextjs-frontend
 
 ```
 
-2. login to aws using the command given below from your vscode terminal [This login will only last for 12 hrs and after that you will need to login in again]
+2. login to aws using the command given below from your vscode terminal. This changes your registry to our organisation's registry repo. [This login will only last for 12 hrs and after that you will need to login in again]
 
 ```
 
@@ -150,9 +150,9 @@ amplify pull --appId d37ymxwcmvjckd --envName dev
 
 8. Make changes
 
-9. Commit ON FEATURE BRANCH
+9. Build and see if build works, `npm run build`
 
-10. Build and see if build works, `npm run build`
+10. Commit ON FEATURE BRANCH
 
 11. Create pull request `gh pr create`
 
@@ -170,7 +170,7 @@ gh repo clone nbnw-org/nbnw-editor-final && cd nbnw-editor-final
 
 ```
 
-2. login to aws using the command given below from your vscode terminal [This login will only last for 12 hrs and after that you will nedd to login in again]
+2. login to aws using the command given below from your vscode terminal. This changes your registry to our organisation's registry repo. [This login will only last for 12 hrs and after that you will nedd to login in again]
 
 ```
 
@@ -232,14 +232,14 @@ amplify pull --appId d2429zdc765i4c --envName dev
 
 8. Make changes
 
-9. Commit ON FEATURE BRANCH
+9. Build and see if build works, `npm run build`
 
-10. Build and see if build works, `npm run build`
+10. Commit ON FEATURE BRANCH
 
 11. Create pull request `gh pr create`
 
 **Note :**
-You can change npm registry using the command given below in your command prompt
+You can change npm registry using the comman given below in your command prompt
 
 To change npm registry :
 
