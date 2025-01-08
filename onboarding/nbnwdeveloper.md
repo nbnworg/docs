@@ -88,7 +88,7 @@ gh repo clone nbnworg/nbnw-nextjs-frontend && cd nbnw-nextjs-frontend
 
 ```
 
-2. login to aws using the command given below from your vscode terminal. This changes your registry to our organisation's registry repo. [This login will only last for 12 hrs and after that you will need to login in again]
+2. Login to AWS using the command given below from your VScode terminal. This changes your registry to our organisation's registry repo. [This login will only last for 12 hrs and after that you will need to login in again]
 
 ```
 
@@ -170,7 +170,7 @@ gh repo clone nbnw-org/nbnw-editor-final && cd nbnw-editor-final
 
 ```
 
-2. login to aws using the command given below from your vscode terminal. This changes your registry to our organisation's registry repo. [This login will only last for 12 hrs and after that you will nedd to login in again]
+2.  Login to AWS using the command given below from your VScode terminal. This changes your registry to our organisation's registry repo. [This login will only last for 12 hrs and after that you will need to login in again]
 
 ```
 
