@@ -1,6 +1,6 @@
 # Development Guidelines for CSS
 
-The aim of this document is to outline the rules and best practices we follow while writing CSS for the project. By reviewing this document, you will gain a clear understanding of the key steps to follow during development.
+The aim of this document is to outline the rules and best practices we follow while writing CSS for the development. By reviewing this document, you will gain a clear understanding of the key steps to follow during development.
 
 ## 0. Why we prefer rem instead of px ?
 
@@ -9,7 +9,7 @@ The aim of this document is to outline the rules and best practices we follow wh
 - Additionally, **rem** enhances accessibility by respecting user preferences for font scaling, ensuring better readability for those who adjust browser font sizes.
   > 1 rem = 16 px
 
-while in some cases we use **px** unit like for box shadows or custom cursors were we want the component to stay of the same size irrespective of the screen size.
+While in some cases we use **px** unit like for box shadows or custom cursors were we want the component to stay of the same size irrespective of the screen size.
 
 ## 1. Why we switched from rem to vw?
 
